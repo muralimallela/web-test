@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+body {
+    
+    background-color: #162938;
+    color: #fff;
+}
+.header {
+    position: fixed;
+    background-color: #162938;
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 1px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+::-webkit-scrollbar {
+    width: px;
+    background: #162938;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 6px;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: small;
+        background-color: #162938;
+        color: #fff;
+    }
+
+    .header {
+        padding: 1px 20px;
+
+    }
+
+    .navigation {
+        font-size: small;
+    }
+    .divider{
+        height: 10px;
+        background-color: #fff;
+        width: 100%;
+    }
+    .Home {
+        font-size: small;
+        margin-top: 50px;
+        padding: 0 10px;
+    }
+
+    .Home h2,h3{
+        text-align: center;
+        margin-top: 10px;
+    }
+    .Home p{
+        margin-top: 10px;
+    }
+    /* Reset default margin and padding for hr elements */
+    hr {
+        margin: 0;
+        padding: 0;
+        border: none;
+        height: 2px;
+        /* Set a default height */
+    }
+
+    /* Style the dividers */
+    .divider {
+        background-color: black;
+        /* Default color */
+    }
+
+    .blue-divider {
+        background-color: blue;
+    }
+
+
+}
